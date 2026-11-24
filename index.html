@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="#" class="logo">Movie<span>Explorer</span></a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#movies">Movies</a>
+                <a href="#about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-label">YOUR CINEMA WORLD</span>
+            <h1>Discover Your Next <span>Favorite Movie</span></h1>
+            <p>
+                Explore thousands of movies, discover amazing stories
+                and find your next movie to watch.
+            </p>
+
+            <a href="#movies" class="hero-btn">Explore Movies</a>
+        </div>
+    </section>
+
+    <!-- Movies -->
+    <main class="container movies-section" id="movies">
+
+        <div class="section-heading">
+            <div>
+                <span class="small-title">EXPLORE COLLECTION</span>
+                <h2>Popular Movies</h2>
+            </div>
+
+            <p id="movieCount">Discover movies from around the world</p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="controls">
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search movies..."
+                >
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <select id="ratingFilter">
+                <option value="all">All Ratings</option>
+                <option value="7">7+ Rating</option>
+                <option value="5">5+ Rating</option>
+            </select>
+
+            <select id="sortSelect">
+                <option value="default">Default Order</option>
+                <option value="high">Highest Rating</option>
+                <option value="low">Lowest Rating</option>
+                <option value="az">Name: A-Z</option>
+                <option value="za">Name: Z-A</option>
+            </select>
+
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading movies...</p>
+        </div>
+
+        <!-- Error -->
+        <div id="error" class="message error hidden">
+            Something went wrong. Please try again.
+            <button id="retryBtn">Try Again</button>
+        </div>
+
+        <!-- Empty -->
+        <div id="empty" class="message hidden">
+            No movies found.
+        </div>
+
+        <!-- Movie Cards -->
+        <div id="movieContainer" class="movie-grid"></div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="pagination"></div>
+
+    </main>
+
+    <!-- Movie Details Modal -->
+    <div id="movieModal" class="modal hidden">
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-modal">&times;</button>
+
+            <div id="modalBody"></div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="about">
+        <h2>Movie<span>Explorer</span></h2>
+        <p>Discover movies. Explore stories. Enjoy cinema.</p>
+        <p class="copyright">
+            &copy; 2026 Movie Explorer. All rights reserved.
+        </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+</html>
